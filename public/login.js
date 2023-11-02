@@ -12,13 +12,14 @@ fetch('http://localhost:3000/users/login',{
         "Content-type":"application/json; charset=UTF-8"
     }
 })
-.then((response)=>{
-    if(!response.ok){
-        throw new Error ('Error');
-    } return response.text()
-})
+.then((response)=>response.json())
 .then((data)=>{
-    console.log(data)
+    if(data.message!="Login successfully"){
+        throw new Error (data.message)
+    } else{
+        sessionStorage.setItem('user-id',data.user.userID)
+        window.location.href = "./planes.html"
+    }
 })
 .catch((err)=>alert(err))
 

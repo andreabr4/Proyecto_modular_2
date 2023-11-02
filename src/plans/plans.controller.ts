@@ -1,12 +1,13 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { PlansService } from './plans.service';
+import { PlansDto } from './dto/plans.dto/plans.dto';
 
 @Controller('plans')
 export class PlansController {
     constructor(private readonly PlansService:PlansService){}
 
     @Post()
-    async createPlan(@Body() body:any){
+    async createPlan(@Body() body:PlansDto){
     return await this.PlansService.createPlan(body)
     }
 

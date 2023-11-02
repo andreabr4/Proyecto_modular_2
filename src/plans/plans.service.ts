@@ -2,14 +2,16 @@ import { Injectable } from '@nestjs/common';
 import { Plan, PlanDocument } from './plans.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { PlansDto } from './dto/plans.dto/plans.dto';
+import {uuid} from 'uuidv4'; 
 
 @Injectable()
 export class PlansService {
     constructor (@InjectModel (Plan.name) private planModel:Model<PlanDocument>){}
     
-async createPlan(plan:any){
+async createPlan(plan:PlansDto){
     let newPlan=new Plan()
-    newPlan.planID=plan.planID
+    newPlan.planID=uuid()
     newPlan.name=plan.name
     newPlan.description=plan.description
     newPlan.userID=plan.userID
