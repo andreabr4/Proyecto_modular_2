@@ -1,0 +1,252 @@
+/* *{
+    margin:0;
+    padding:0; 
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color:#F1F1F0;
+}
+
+
+.navbar {
+
+    border-bottom: 2px solid #6669C6; 
+    background-color:#F1F1F0;   
+}
+
+.logo{
+    width: 250px;
+    height:auto;
+    margin-left: 100px;
+}
+
+.initialLogin{
+    padding: 7vh 4vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+h1{
+    font-weight: lighter;
+    margin-bottom: 50px;
+}
+
+#email{
+    background-color: #D7D7D7;
+}
+
+label[for="password"]::before {
+    margin-left: 60px;
+    content: "";
+}
+
+#password{
+    background-color: #D7D7D7;
+}
+
+a::before{
+    content:"";
+    display: block;
+    margin-top: 50px;
+}
+
+#loginButton{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #D7D7D7;
+    color: #6669C6;
+    font-weight: bolder;
+    width: fit-content;
+}
+
+.bottomImage{
+    width: 150px;
+    height: auto;
+    float:right
+} */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: #F1F1F0; /* Color de fondo sin animación */
+}
+
+.navbar {
+    border-bottom: 2px solid #6669C6;
+    background-color: #F1F1F0;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+    margin-left: 100px;
+    animation: slideIn 1s ease-out forwards;
+    background-color: #F1F1F0; /* Color de fondo específico para el logo */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.initialLogin {
+    padding: 7vh 4vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    background-color: #F1F1F0; /* Color de fondo para el área de login */
+}
+
+h1 {
+    font-weight: lighter;
+    margin-bottom: 50px;
+}
+
+#email, #password {
+    background-color: #D7D7D7;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#email:focus, #password:focus {
+    background-color: #E8E8E8;
+    box-shadow: 0 0 8px rgba(102, 105, 198, 0.5);
+}
+
+label[for="password"]::before {
+    margin-left: 60px;
+    content: "";
+}
+
+a::before {
+    content: "";
+    display: block;
+    margin-top: 50px;
+}
+
+#loginButton {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #D7D7D7;
+    color: #6669C6;
+    font-weight: bolder;
+    width: fit-content;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#loginButton:hover {
+    background-color: #6669C6;
+    color: #F1F1F0;
+    transform: translateY(-3px);
+}
+
+.bottomImage {
+    width: 150px;
+    height: auto;
+    float: right;
+    animation: float 3s ease-in-out infinite;
+    background-color: #F1F1F0; /* Color de fondo para la imagen inferior */
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+
+
+/* ------------PLAN CRAFT-------------------------------- */
+
+
+.newPlan{
+    padding: 7vh 4vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    margin-top: 200px;
+}
+
+#planName, #planDescription{
+    background-color: #D7D7D7;
+}
+
+label[for="planDescription"]::before {
+    margin-left: 60px;
+    content: "";
+}
+
+#newPlanButton{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #D7D7D7;
+    color: #6669C6;
+    font-weight: bolder;
+    width: fit-content;
+}
+
+
+/* --------------------PLANES--------------------- */
+
+.plansInfo{
+    padding: 7vh 4vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    margin-top: 200px;
+}
+
+
+/* -----------------REGISTRO-------------- */
+
+.h1Register {
+    margin-left: 50px;
+    margin-top: 100px;
+    font-weight: lighter;
+}
+.registerHTML{
+    padding: 7vh 4vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+#email, #password, #name, #surname{
+    margin-top: 30px;
+    background-color: #D7D7D7;
+}
+
+#registerButton{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #D7D7D7;
+    color: #6669C6;
+    font-weight: bolder;
+    width: fit-content;
+}

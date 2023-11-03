@@ -3,7 +3,7 @@ import { Plan, PlanDocument } from './plans.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { PlansDto } from './dto/plans.dto/plans.dto';
-import {uuid} from 'uuidv4'; 
+import {v4} from 'uuid'; 
 
 @Injectable()
 export class PlansService {
@@ -11,7 +11,7 @@ export class PlansService {
     
 async createPlan(plan:PlansDto){
     let newPlan=new Plan()
-    newPlan.planID=uuid()
+    newPlan.planID=v4()
     newPlan.name=plan.name
     newPlan.description=plan.description
     newPlan.userID=plan.userID

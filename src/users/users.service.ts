@@ -3,7 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { User, UserDocument } from './Users.schema';
 import { Model } from 'mongoose';
 import { UsersDto } from './dto/users.dto/users.dto';
-import {uuid} from 'uuidv4';
+import {v4} from 'uuid';
 import * as bcrypt from "bcrypt";
 import { UserLoginDto } from './dto/users-login.dto/users-login.dto';
 
@@ -15,13 +15,12 @@ export class UserService {
             const saltOrRounds=10; 
            
             let newUser=new User()
-            newUser.userID=uuid()
+            newUser.userID=v4()
             newUser.name=user.name
             newUser.surname=user.surname
             newUser.email=user.email
             newUser.password= await bcrypt.hash(user.password,saltOrRounds)
-            
-        
+             
             return await this.userModel.create(newUser)
         }
 
