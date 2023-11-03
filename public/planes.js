@@ -2,8 +2,7 @@
     fetch(`http://localhost:3000/plans/users/${userID}`)
     .then((response=>response.json()))
     .then((data)=>{
-        console.log(data)
-
+        
         data.forEach(plan => {
             
             let plansInfo=document.getElementById("plansInfo")
@@ -16,7 +15,6 @@
             addedDescription.textContent = `${plan.description}`
             plansInfo.appendChild(addedDescription)
     
-            console.log(plan)
         });
     })
     .catch()
