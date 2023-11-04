@@ -1,3 +1,8 @@
+let userID=sessionStorage.getItem('user-id')
+if(userID!=undefined){
+    window.location.href = "./planes.html"
+}
+
 document.getElementById("registerButton").addEventListener("click", function(){
     let email=document.getElementById('email').value;
     let password=document.getElementById('password').value;
@@ -17,12 +22,15 @@ document.getElementById("registerButton").addEventListener("click", function(){
         }
     })
     .then((response)=>{
-        if(!response.ok){
-            throw new Error ('Error al registrar nuevo/a usuario/a');
-        } return response.text()
-    })
-    .then((data)=>{
-        console.log(data)
+        if(response.status==201){
+            response.json()
+            .then(data=>{
+                sessionStorage.setItem('user-id',data.userID)
+                window.location.href = "./planes.html"
+            })
+        }else{
+            alert(response.statusText)
+        }        
     })
     .catch((err)=>alert(err))
     

@@ -1,8 +1,13 @@
-    let userID=sessionStorage.getItem('user-id')
+let userID=sessionStorage.getItem('user-id')
+    
+    if(userID==undefined){
+    window.location.href = "./index.html"
+    }else{
+
     fetch(`http://localhost:3000/plans/users/${userID}`)
     .then((response=>response.json()))
     .then((data)=>{
-        
+
         data.forEach(plan => {
             
             let plansInfo=document.getElementById("plansInfo")
@@ -17,4 +22,5 @@
     
         });
     })
-    .catch()
+    .catch((err)=> alert ("Error"))
+}

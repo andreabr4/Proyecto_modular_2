@@ -1,3 +1,5 @@
+sessionStorage.removeItem('user-id')
+
 document.getElementById("loginButton").addEventListener("click", function(){
 let email=document.getElementById('email').value;
 let password=document.getElementById('password').value;
