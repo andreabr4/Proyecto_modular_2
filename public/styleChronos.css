@@ -1,74 +1,3 @@
-/* *{
-    margin:0;
-    padding:0; 
-    box-sizing: border-box;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color:#F1F1F0;
-}
-
-
-.navbar {
-
-    border-bottom: 2px solid #6669C6; 
-    background-color:#F1F1F0;   
-}
-
-.logo{
-    width: 250px;
-    height:auto;
-    margin-left: 100px;
-}
-
-.initialLogin{
-    padding: 7vh 4vw;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-}
-
-h1{
-    font-weight: lighter;
-    margin-bottom: 50px;
-}
-
-#email{
-    background-color: #D7D7D7;
-}
-
-label[for="password"]::before {
-    margin-left: 60px;
-    content: "";
-}
-
-#password{
-    background-color: #D7D7D7;
-}
-
-a::before{
-    content:"";
-    display: block;
-    margin-top: 50px;
-}
-
-#loginButton{
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #D7D7D7;
-    color: #6669C6;
-    font-weight: bolder;
-    width: fit-content;
-}
-
-.bottomImage{
-    width: 150px;
-    height: auto;
-    float:right
-} */
-
 
 * {
     margin: 0;
@@ -78,22 +7,15 @@ a::before{
 }
 
 body {
-    background-color: #F1F1F0; /* Color de fondo sin animación */
-}
-
-.navbar {
-    /* border-bottom: 2px solid #6669C6; */
     background-color: #F1F1F0;
 }
 
 .logo {
-
     width: 300px;
     height:auto;
     display: block;
     margin: 0 auto;
     animation: slideIn 1s ease-out forwards;
-    background-color: #F1F1F0; /* Color de fondo específico para el logo */
 }
 
 @keyframes slideIn {
@@ -108,17 +30,13 @@ body {
 }
 
 .initialLogin {
-    /* background-color: rgba(255, 255, 255, 0.8); */
-    /* background-color: #e2e3ff; */
-    /* background-color: #fef1cd ; */
     border:#6669C6 1px solid;
-    /* border: #ffd76a 1px solid ; */
     border-radius: 10px;
     padding: 40px;
     margin: 40px auto;
     width: 80%;
     max-width: 450px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 h1 {
@@ -127,7 +45,7 @@ h1 {
 }
 
 input[type="text"], input[type="password"], input[type="file"] {
-    border: 2px solid #6669C6; 
+    border: 1px solid #6669C6; 
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
@@ -148,7 +66,6 @@ label[for="password"], label[for="email"] {
     margin-top: 20px;
 }
 
-
 a::before {
     content: "";
     display: block;
@@ -163,8 +80,6 @@ a::before {
     border-radius: 5px;
     padding: 5px;
     background-color: #D7D7D7;
-    /* color: #6669C6; */
-    /* font-weight: bolder; */
     width: fit-content;
     transition: background-color 0.3s, transform 0.3s;
 }
@@ -184,60 +99,189 @@ a::before {
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
-    margin-top: 200px;
+    margin-top: 4vh;
 }
 
-#planName, #planDescription{
-    background-color: #D7D7D7;
+#planName{
+    width: 60vw; 
+    height: 3vw;
+    background-color: #f7f0f0;
 }
 
 label[for="planDescription"]::before {
-    margin-left: 60px;
     content: "";
 }
 
+#planDescription{
+    width: 60vw; 
+    height: 7vw; 
+    background-color: #f7f0f0;
+}
+
+
+.starRating {
+    display: inline-block;
+  }
+  
+  .stars {
+    display: inline-block;
+  }
+  
+  .star {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  
+  .star.checked {
+    color: gold;
+  }
+
 #newPlanButton{
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+
     display: block;
     border-radius: 5px;
     padding: 5px;
-    background-color: #D7D7D7;
     color: #6669C6;
     font-weight: bolder;
     width: fit-content;
 }
 
+#closeSession{
+
+    margin-top: 5vh;
+    display: flex;
+    margin-left: 75vw;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #6669C6;
+    color: white;
+    font-weight: bolder;
+    width: fit-content;
+}
 
 /* --------------------PLANES--------------------- */
 
-.plansInfo{
-    padding: 7vh 4vw;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    margin-top: 200px;
+
+.imagePlans {
+    width: 250px;
+    height:auto;
+    animation: slideIn 1s ease-out forwards;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.planesUserID {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.div-plansInfo {
+    display: grid;
+    gap: 20px; 
+    padding: 20px;
+}
+
+.div-plansInfo > div {
+    background-color: #ffffff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    padding: 20px;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.div-plansInfo > div:hover {
+    transform: translateY(-5px); 
+}
+
+
+.div-plansInfo > div > div:first-child > div:last-child{
+    font-weight: bold;
+    margin-bottom: 10px; 
+}
+
+
+.div-plansInfo > div > div:last-child { 
+    font-size: 0.9em; 
+}
+
+#addedPlan{
+    font-weight: bolder;
+}
+
+#addedDescription{
+    margin-top: 1vh;
+    white-space: pre-wrap;
+}
+
+#deletePlan{  
+        margin-top: 3vh;
+        display: flex;
+        margin-left: 80vw;
+        border-radius: 5px;
+        padding: 5px;
+        color: #6669C6;
+        font-weight: bolder;
+        width: fit-content;
+    }
+    
+
+a {
+    text-decoration: none;
+    color: rgb(119, 119, 241); 
+    font-weight: bold;
+    margin-top: 30px; 
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3; 
+}
+
+#closeSessionPlans{
+
+    display: flex;
+    margin-left: 85vw;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #6669C6;
+    color: white;
+    font-weight: bolder;
+    width: fit-content;
+}
 
 /* -----------------REGISTRO-------------- */
 
-.h1Register {
-    margin-left: 50px;
-    margin-top: 100px;
-    font-weight: lighter;
+.upperImage{
+    margin-top: 2vh;
+    width: 200px;
+    height:auto;
+    display: block;
+    margin: 0 auto;
 }
+
+.h1Register {
+    margin-left: 4vw;
+    margin-top: 7vh;
+    margin-bottom: -3vh;
+    font-weight: lighter;
+    font-size: larger;
+    font-weight: bold;
+}
+
 .registerHTML{
-    padding: 7vh 4vw;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
+    padding: 4vh 4vw;
+    width:auto;
 }
 
 #email, #password, #name, #surname{
-    margin-top: 30px;
-    /* background-color: #D7D7D7; */
+    margin-top: 2vh;
 }
 
 #registerButton{
@@ -247,7 +291,6 @@ label[for="planDescription"]::before {
     display: block;
     border-radius: 5px;
     padding: 5px;
-    background-color: #D7D7D7;
     color: #6669C6;
     font-weight: bolder;
     width: fit-content;

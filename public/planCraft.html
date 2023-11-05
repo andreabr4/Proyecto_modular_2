@@ -8,16 +8,32 @@
 </head>
 <body>
 
+    <div class="upperImage">
+        <img class="logo" src="./logo2-transparent.png" alt="Mono">
+    </div> 
+
     <div class="newPlan">
         <label for="planName">Nombre del plan:</label>
         <input type="text" id="planName">
 
         <label for="planDescription">Describa su plan:</label>
         <input type="text" id="planDescription">
-    
-        <input type="file" id="image-upload" accept="image/*">
+
+        <div class="starRating">
+            <input type="range" id="starRating" min="0" max="5" step="1" value="0">
+            <div class="stars">
+              <span class="star">&#9734;</span> 
+              <span class="star">&#9734;</span>
+              <span class="star">&#9734;</span> 
+              <span class="star">&#9734;</span> 
+              <span class="star">&#9734;</span> 
+            </div>
+          </div>
 
         <button id="newPlanButton">Guardar nuevo plan</button>
+        <a href="./planes.html" style="color: rgb(119, 119, 241);">Vuelve a inspirarte en tus planes</a>
+
+        <button id="closeSession">Cerrar sesión</button>
     
 </body>
 <script src="./planCraft.js"></script>

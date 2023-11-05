@@ -17,6 +17,9 @@ export class Plan{
 
     @Prop({required:true})
     userID:string;
+
+    @Prop({required:true})
+    opinion:number;
 }
 
 export const PlanSchema=SchemaFactory.createForClass(Plan)

@@ -15,6 +15,7 @@ async createPlan(plan:PlansDto){
     newPlan.name=plan.name
     newPlan.description=plan.description
     newPlan.userID=plan.userID
+    newPlan.opinion = plan.opinion
 
     return await this.planModel.create(newPlan)
 }
